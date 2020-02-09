@@ -10,5 +10,6 @@ export default class AddGistController extends Controller {
   addFile(body, description, fileName) {
     this.gistsInfo.addGist({ body, description, fileName });
     console.log(body, description, fileName);
+    this.transitionToRoute("index");
   }
 }
